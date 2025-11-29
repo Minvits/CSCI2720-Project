@@ -1,0 +1,265 @@
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(135deg, #2b9b7a 0%, #1a7057 100%);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.navbar-brand a:hover {
+  opacity: 0.8;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  flex: 1;
+  margin-left: 50px;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  font-weight: 500;
+}
+
+.navbar-menu a:hover {
+  opacity: 0.8;
+}
+
+.navbar-menu a.hidden {
+  display: none;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-logout {
+  padding: 8px 16px;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-logout:hover {
+  background-color: white;
+  color: #2b9b7a;
+}
+
+/* LOCATION CARD */
+.location-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+html[data-theme="dark"] .location-card {
+  background: #3a3a3a;
+  border-color: #555;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.location-card h3 {
+  color: #2b9b7a;
+  margin-bottom: 10px;
+}
+
+.location-card p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+html[data-theme="dark"] .location-card p {
+  color: #aaa;
+}
+
+.venue-id,
+.event-count {
+  font-weight: 600;
+}
+
+.location-coords small {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.updated-at {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+/* COMMENT SECTION */
+.comment-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+html[data-theme="dark"] .comment-section {
+  background: #2a2a2a;
+}
+
+.comment-form {
+  margin-bottom: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+html[data-theme="dark"] .comment-form textarea {
+  background: #3a3a3a;
+  color: #f5f5f5;
+  border-color: #555;
+}
+
+.comment-form .form-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.comment-form select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+html[data-theme="dark"] .comment-form select {
+  background: #3a3a3a;
+  color: #f5f5f5;
+  border-color: #555;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comment-item {
+  padding: 15px;
+  background: #f9f9f9;
+  border-left: 4px solid #2b9b7a;
+  border-radius: 4px;
+}
+
+html[data-theme="dark"] .comment-item {
+  background: #3a3a3a;
+  border-left-color: #4a9a7a;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #2b9b7a;
+}
+
+.comment-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.comment-rating {
+  color: #f39c12;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.comment-text {
+  color: #555;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+html[data-theme="dark"] .comment-text {
+  color: #ddd;
+}
+
+.comment-delete {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.comment-delete:hover {
+  background: #c0392b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .navbar-menu {
+    margin-left: 0;
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .navbar-brand {
+    width: 100%;
+  }
+  
+  .navbar-user {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
